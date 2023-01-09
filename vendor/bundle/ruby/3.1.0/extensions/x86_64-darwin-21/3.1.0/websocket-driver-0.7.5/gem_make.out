@@ -1,5 +1,5 @@
 current directory: /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
-/Users/hisazumimasahito/.rbenv/versions/3.1.2/bin/ruby -I /Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230106-48061-kdma6l.rb extconf.rb
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/bin/ruby -I /Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230110-58175-6fpr1w.rb extconf.rb
 creating Makefile
 
 current directory: /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
@@ -13,4 +13,4 @@ ld: warning: -undefined dynamic_lookup may not work with chained fixups
 
 current directory: /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/websocket-driver-0.7.5/ext/websocket-driver
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20230106-48061-pr0h5g
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20230110-58175-4vj3ua

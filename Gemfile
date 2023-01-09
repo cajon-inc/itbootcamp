@@ -19,6 +19,8 @@ gem "devise"
 gem 'omniauth-line'
 gem 'omniauth-rails_csrf_protection'
 gem 'dotenv-rails'
+gem 'microcms-ruby-sdk'
+gem 'httpclient'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

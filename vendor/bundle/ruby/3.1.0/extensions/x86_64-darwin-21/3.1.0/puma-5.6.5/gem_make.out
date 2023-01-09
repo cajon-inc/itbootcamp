@@ -1,5 +1,5 @@
 current directory: /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/puma-5.6.5/ext/puma_http11
-/Users/hisazumimasahito/.rbenv/versions/3.1.2/bin/ruby -I /Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230106-48061-8b0zyl.rb extconf.rb
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/bin/ruby -I /Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230110-58175-c8et1r.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -26,4 +26,4 @@ ld: warning: -undefined dynamic_lookup may not work with chained fixups
 
 current directory: /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/puma-5.6.5/ext/puma_http11
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20230106-48061-q26v5q/puma
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20230110-58175-7yd2df/puma
