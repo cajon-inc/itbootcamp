@@ -19,7 +19,7 @@
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a class="normal-case text-xl">IT BootCamp for Beauty</a>
+    <%= link_to 'IT BootCamp for Beauty', root_path, class: 'normal-case text-xl' %>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
@@ -47,6 +47,6 @@
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn">ログイン</a>
+    <%= link_to 'LINEログイン', user_line_omniauth_authorize_path, class: :btn, method: :post %>
   </div>
 </div>
