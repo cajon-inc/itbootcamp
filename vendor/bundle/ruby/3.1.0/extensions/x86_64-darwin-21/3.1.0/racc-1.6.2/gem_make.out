@@ -1,5 +1,5 @@
 current directory: /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
-/Users/hisazumimasahito/.rbenv/versions/3.1.2/bin/ruby -I /Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230110-58175-hl2rfi.rb extconf.rb
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/bin/ruby -I /Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230110-15478-6jahcu.rb extconf.rb
 checking for rb_block_call()... yes
 checking for rb_ary_subseq()... yes
 creating Makefile
@@ -15,4 +15,4 @@ ld: warning: -undefined dynamic_lookup may not work with chained fixups
 
 current directory: /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20230110-58175-pzc08r/racc
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20230110-15478-vvogdw/racc
