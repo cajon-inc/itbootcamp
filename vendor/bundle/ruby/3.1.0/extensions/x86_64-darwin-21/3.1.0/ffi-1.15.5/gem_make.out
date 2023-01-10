@@ -1,5 +1,5 @@
 current directory: /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/ffi-1.15.5/ext/ffi_c
-/Users/hisazumimasahito/.rbenv/versions/3.1.2/bin/ruby -I /Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230110-68811-cheykn.rb extconf.rb
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/bin/ruby -I /Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230110-74557-pqz3kr.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... no
 checking for ffi_prep_closure_loc() in -llibffi... no
 checking for ffi_prep_closure_loc() in -llibffi-8... no
@@ -126,4 +126,4 @@ compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
 ld: warning: -undefined dynamic_lookup may not work with chained fixups
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20230110-68811-hbikkq
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20230110-74557-1g3jb
