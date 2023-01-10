@@ -14,8 +14,8 @@ class LineLoginApiController < ApplicationController
 
     base_authorization_url = 'https://access.line.me/oauth2/v2.1/authorize'
     response_type = 'code'
-    client_id = ENV['LINE_KEY'] #本番環境では環境変数などに保管する
-    redirect_uri = 'https://itbootcamp-beauty.herokuapp.com/line_login_api/callback'
+    client_id = '1657392493' #本番環境では環境変数などに保管する
+    redirect_uri = CGI.escape(line_login_api_callback_url)
     state = session[:state]
     scope = 'profile%20openid' #ユーザーに付与を依頼する権限
 
@@ -60,7 +60,7 @@ class LineLoginApiController < ApplicationController
       options = {
         body: {
           id_token: line_user_id_token,
-          client_id: ENV['LINE_KEY'] # 本番環境では環境変数などに保管
+          client_id: '1657392493' # 本番環境では環境変数などに保管
         }
       }
 
@@ -94,8 +94,8 @@ class LineLoginApiController < ApplicationController
         grant_type: 'authorization_code',
         code: code,
         redirect_uri: redirect_uri,
-        client_id: ENV['LINE_KEY'], # 本番環境では環境変数などに保管
-        client_secret: ENV['LINE_SECRET'] # 本番環境では環境変数などに保管
+        client_id: '1657392493', # 本番環境では環境変数などに保管
+        client_secret: '22c13aeca485af51188019549b743e86' # 本番環境では環境変数などに保管
       }
     }
     response = Typhoeus::Request.post(url, options)
