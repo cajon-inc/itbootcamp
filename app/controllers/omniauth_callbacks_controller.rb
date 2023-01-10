@@ -13,7 +13,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
       @profile.set_values(@omniauth)
       sign_in(:user, @profile)
-      redirect_to 'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id={1657610690}&redirect_uri={https://itbootcamp-beauty.herokuapp.com/auth/line/callback}&state={normal}&bot_prompt={BOT_PROMPT}&scope={SCOPE_LIST}'
+      redirect_to 'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id={1657610690}&redirect_uri={https://itbootcamp-beauty.herokuapp.com/auth/line/callback}&state={normal}'
     end
     flash[:notice] = "ログインしました"
     redirect_to root_path
