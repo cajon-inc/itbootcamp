@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   root "articles#index"
   resources :articles, only: [:show]
+  get 'line_login_api/login', to: 'line_login_api#login'
+  get 'line_login_api/callback', to: 'line_login_api#callback'
 
   devise_for :users,
     path: '',
