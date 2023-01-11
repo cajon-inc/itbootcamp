@@ -1,4 +1,4 @@
-class LineLoginApiController < ApplicationController
+class LineLoginApiController < Devise::ApplicationController
   require 'json'
   require 'typhoeus'
   require 'securerandom'
