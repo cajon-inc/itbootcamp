@@ -11,9 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="flex flex-col min-h-screen">
+  <body data-theme="cmyk" class="flex flex-col min-h-screen">
     <%= render 'shared/navbar' %>
-    <main class="container mx-auto mt-28 px-5 flex-grow">
+    <main class="mx-auto flex-grow">
       <%= yield %>
     </main>
     <%= render 'shared/footer' %>
