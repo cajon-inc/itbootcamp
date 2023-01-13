@@ -1,15 +1,15 @@
-<div class='container mx-auto sm:px-10 md:px-20'>
-  <h2 class='pt-5 text-xl font-bold text-center text-gray-900 sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl leading-10'>新着記事</h2>
+<div class='container mx-auto sm:px-10 md:px-20 mt-5'>
+  <h2 class='py-10 text-xl font-bold text-center text-gray-900 sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl leading-10'>新着記事</h2>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 sm:gap-2 xl:gap-2">
-    <% @articles[:contents].each do |article| %>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 sm:gap-2 xl:gap-2 mx-20">
+    <% @articles[:contents].first(6).each do |article| %>
       <%= link_to article_path(article[:id]) do %>
         <div class="flex flex-col md:flex-row items-center gap-3 lg:gap-4">
           <div class="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
             <%= image_tag article[:eye_catch][:url].to_s.html_safe, alt: article[:title], width: article[:eye_catch][:width], height: article[:eye_catch][:height], class: "w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" %>
           </div>
           <div class="flex flex-col gap-2">
-            <h2 class="text-gray-800 text-base font-bold">
+            <h2 class="text-gray-800 text-sm font-bold">
               <div class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">
               <%= article[:title] %></div>
             </h2>
@@ -20,7 +20,7 @@
                 </span>
               <% end %>
             </div>
-            <span class="text-gray-400 text-sm">July 19, 2021</span>
+            <span class="text-gray-400 text-sm"><%= article[:publishDate].to_date %></span>
           </div>
         </div>
       <% end %>
