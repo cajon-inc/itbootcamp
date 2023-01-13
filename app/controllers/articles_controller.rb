@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @articles = microcms
     @article = microcms(params[:id])
   end
 

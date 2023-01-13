@@ -1,4 +1,94 @@
-<h2><%= @article[:title] %></h2>
-<%= @article[:body].to_s.html_safe %>
+<div class='container mx-auto grid grid-cols-1 py-10 lg:grid-cols-3 xl:grid-cols-3'>
+  <div class='col-span-2 px-10'>
+    <%= image_tag @article[:eye_catch][:url].to_s.html_safe, alt: @article[:title], width: @article[:eye_catch][:width], height: @article[:eye_catch][:height] %>
+      <div class='mt-3'>
+        <h1 class='text-lg font-bold text-gray-900 sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl'>
+          <%= @article[:title] %>
+        </h1>
+      </div>
+      <div class='my-4'>
+        <div class='px-6 py-1 text-gray-500 text-sm block tracking-wider'>
+          <%= @article[:publishDate].to_date %>
+        </div>
+        <div class='ml-3 inline-block rounded-md'>
+          <% @article[:tags].each do |tag| %>
+            <span class='mr-2 text-sm font-medium text-gray-400 flex float-left'>
+              <i class="fa-solid fa-tag pt-1"></i><div class='ml-1 mb-1'><%= tag[:tag] %></div>
+            </span>
+          <% end %>
+        </div>
+          <%# ここにシェアボタン %>
+      </div>
+      <div class="border bg-slate-50 p-5">
+           <%# ここに目次 %>
+      </div>
+      <div class='mt-2 js-toc-content'>
+        <% @article[:body].each do |body| %>
+          <% if body[:fieldId] == 'heading2' %>
+            <h2 class='text-2xl border-b-2 font-bold pl-3 border-slate-500 my-8 pb-2'>
+              <%= body[:heading2].html_safe %>
+            </h2>
+          <% elsif body[:fieldId] == 'heading3' %>
+            <h3 class='text-xl font-semibold border-l-2 pl-3 py-3 border-slate-500 bg-stone-100 my-5'>
+              <%= body[:heading3].html_safe %>
+            </h3>
+          <% elsif body[:fieldId] == 'content' %>
+            <p class="leading-relaxed">
+              <%= body[:body].html_safe %>
+            </p>
+          <% elsif body[:fieldId] == 'html' %>
+            <div class="leading-relaxed">
+              <%= body[:html].html_safe %>
+            </div>
+          <% elsif body[:fieldId] == 'youtube' %>
+            <div class="youtube my-3">
+              <%= body[:youtube].html_safe %>
+            </div>
+          <% end %>
+        <% end %>
 
+      </div>
+      <div>
+        <% if @article[:categories][:id] == 'instagram-bootcamp' %>
+          <a href="https://instabootcamp.i-b-c.jp">
+            <%= image_tag '/insta_new_bannar.png', width: '800', height: '280', alt: 'インスタブートキャンプ' %>
+          </a>
+        <% end %> 
+      </div>
+  </div>
 
+  <%# サイドバー %>
+  <div class='col-span-1 px-10'>
+    <aside>
+      <h3 class='bg-slate-200 text-lg p-2 mt-3 mb-2 font-semibold rounded-md'>カテゴリー</h3>
+      
+        <ul class='space-y-3 my-3'>
+          <% @articles[:contents].each do |article| %>
+            <li class='py-1 px-2 text-md font-medium text-gray-700 border-b border-slate-200'>
+              <a class='flex hover:text-rose-700'>
+                <div class='ml-2 mt-1'>
+                  <%= article[:categories][:name]%>
+                </div>
+              </a> 
+             </li> 
+          <% end %>
+        </ul>
+
+      <h3 class='bg-slate-200 text-lg p-2 mt-5 mb-2 font-semibold rounded-md'>タグ</h3>
+      <% @articles[:contents].each do |article| %>
+        <ul>
+          <% article[:tags].each do |tag| %>
+            <li class='py-1 px-2 text-sm font-medium text-gray-700 inline-block float-left'>
+              <a class='flex hover:text-rose-700'>
+                <span class='mr-2 text-sm font-medium text-gray-400 flex float-left'>
+                  <i class="fa-solid fa-tag pt-1"></i><div class='ml-1 mb-1'><%= tag[:tag] %></div>
+                </span>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </aside>
+    <%= render 'shared/side_bannar' %>
+  </div>
+</div>

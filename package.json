@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "daisyui": "^2.46.1",
-    "heroicons": "^2.0.13"
+    "heroicons": "^2.0.13",
+    "swiper": "^8.4.5"
   }
 }
