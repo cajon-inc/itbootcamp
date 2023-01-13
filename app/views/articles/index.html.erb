@@ -1,15 +1,16 @@
 <div class='container mx-auto sm:px-10 md:px-20'>
   <h2 class='pt-5 text-xl font-bold text-center text-gray-900 sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl leading-10'>新着記事</h2>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 sm:gap-2 xl:gap-2">
     <% @articles[:contents].each do |article| %>
       <%= link_to article_path(article[:id]) do %>
-        <div class="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
+        <div class="flex flex-col md:flex-row items-center gap-3 lg:gap-4">
           <div class="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
-            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+            
+            <%= image_tag article[:eye_catch][:url].to_s.html_safe, alt: article[:title], width: article[:eye_catch][:width], height: article[:eye_catch][:height], class: "w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" %>
           </div>
           <div class="flex flex-col gap-2">
-            <h2 class="text-gray-800 text-lg font-bold">
+            <h2 class="text-gray-800 text-base font-bold">
               <div class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">
               <%= article[:title] %></div>
             </h2>
