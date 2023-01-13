@@ -6,7 +6,6 @@
       <%= link_to article_path(article[:id]) do %>
         <div class="flex flex-col md:flex-row items-center gap-3 lg:gap-4">
           <div class="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
-            
             <%= image_tag article[:eye_catch][:url].to_s.html_safe, alt: article[:title], width: article[:eye_catch][:width], height: article[:eye_catch][:height], class: "w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" %>
           </div>
           <div class="flex flex-col gap-2">
@@ -14,6 +13,13 @@
               <div class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">
               <%= article[:title] %></div>
             </h2>
+            <div class='inline-block rounded-md'>
+              <% article[:tags].each do |tag| %>
+                <span class='mr-2 text-sm font-medium text-gray-400 flex float-left'>
+                  <i class="fa-solid fa-tag pt-1"></i><div class='ml-1 mb-1'><%= tag[:tag] %></div>
+                </span>
+              <% end %>
+            </div>
             <span class="text-gray-400 text-sm">July 19, 2021</span>
           </div>
         </div>
