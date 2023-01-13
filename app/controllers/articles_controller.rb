@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   require "httpclient"
+  require 'microcms'
 
   def index
     @articles = microcms
@@ -15,8 +16,7 @@ class ArticlesController < ApplicationController
       client = HTTPClient.new
       response = client.get(
         "https://ibc.microcms.io/api/v1/articles/#{id}",
-        header: { "X-MICROCMS-API-KEY": Rails.application.credentials.microcms[:api_key] },
-
+        header: { "X-MICROCMS-API-KEY": Rails.application.credentials.microcms[:api_key]}
       )
 
       raise ActiveRecord::RecordNotFound if response.status == 404

@@ -3,13 +3,18 @@ class PagesController < ApplicationController
     @articles = microcms
   end
 
+  def privacy
+  end
+
+  def terms
+  end
+
   private
     def microcms(id=nil)
       client = HTTPClient.new
       response = client.get(
         "https://ibc.microcms.io/api/v1/articles/#{id}",
         header: { "X-MICROCMS-API-KEY": Rails.application.credentials.microcms[:api_key] },
-
       )
 
       raise ActiveRecord::RecordNotFound if response.status == 404
