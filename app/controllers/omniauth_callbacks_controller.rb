@@ -27,9 +27,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
       authorization_url = "#{base_authorization_url}?response_type=#{response_type}&client_id=#{client_id}&redirect_uri=#{redirect_uri}&state=#{state}&bot_prompt=#{bot_prompt}&scope=#{scope}"
 
-      
-      @profile.set_values(@omniauth)
-      sign_in(:user, @profile)
     end
     flash[:notice] = "ログインしました"
     redirect_to root_path
