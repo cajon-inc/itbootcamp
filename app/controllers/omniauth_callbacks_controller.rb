@@ -12,21 +12,22 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         @profile = current_user || User.create!(provider: @omniauth["provider"], uid: @omniauth["uid"], email: email, name: @omniauth["info"]["name"], password: Devise.friendly_token[0, 20])
       end
 
-      url = 'https://api.line.me/oauth2/v2.1/token'
-      redirect_uri = line_login_api_callback_url
+      session[:state] = SecureRandom.urlsafe_base64
 
-      options = {
-        headers: {
-          'Content-Type' => 'application/x-www-form-urlencoded'
-        },
-        body: {
-          grant_type: 'authorization_code',
-          code: code,
-          redirect_uri: redirect_uri,
-          client_id: ENV['LINE_KEY'], # 本番環境では環境変数などに保管
-          client_secret: ENV['LINE_SECRET'] # 本番環境では環境変数などに保管
-        }
-      }
+      # ユーザーに認証と認可を要求する
+      # https://developers.line.biz/ja/docs/line-login/integrate-line-login/#making-an-authorization-request
+
+      base_authorization_url = 'https://access.line.me/oauth2/v2.1/authorize'
+      response_type = 'code'
+      client_id = ENV['LINE_KEY'] #本番環境では環境変数などに保管する
+      redirect_uri = CGI.escape(line_login_api_callback_url)
+      state = session[:state]
+      bot_prompt='aggressive'
+      scope = 'profile%20openid' #ユーザーに付与を依頼する権限
+
+      authorization_url = "#{base_authorization_url}?response_type=#{response_type}&client_id=#{client_id}&redirect_uri=#{redirect_uri}&state=#{state}&bot_prompt=#{bot_prompt}&scope=#{scope}"
+
+      redirect_to authorization_url, allow_other_host: true
       
       @profile.set_values(@omniauth)
       sign_in(:user, @profile)
