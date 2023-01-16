@@ -16,7 +16,7 @@ class LineLoginApiController < ApplicationController
     response_type = 'code'
     client_id = ENV['LINE_KEY'] #本番環境では環境変数などに保管する
     redirect_uri = CGI.escape(line_login_api_callback_url)
-    state = 'state'
+    state = session[:state]
     bot_prompt='aggressive'
     scope = 'profile%20openid' #ユーザーに付与を依頼する権限
 

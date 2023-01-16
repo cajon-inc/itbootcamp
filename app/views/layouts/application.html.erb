@@ -13,6 +13,8 @@
   <body data-theme="cupcake" class="flex flex-col min-h-screen">
     <%= render 'shared/header' %>
     <main class="flex-grow">
+      <%= notice %>
+      <%= alert %>
       <%= yield %>
     </main>
     <%= render 'shared/footer' %>
