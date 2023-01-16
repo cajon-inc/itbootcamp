@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'privacy-policy', to: 'pages#privacy'
   get 'terms', to: 'pages#terms'
+  get 'line_login_api/login', to: 'line_login_api#login'
+  get 'line_login_api/callback', to: 'line_login_api#callback'
 
   devise_for :users,
     path: '',

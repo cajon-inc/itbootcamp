@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+abort "There was a problem installing your gem. The ngrok gem can't currently be installed to non-default directories (i.e. using the -​-install-dir or -​-bindir options).
+
+Please install ngrok manually - e.g. `curl -O https://dl.ngrok.com/darwin_amd64/ngrok.zip && unzip ngrok.zip -d /usr/local/bin`"

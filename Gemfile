@@ -24,6 +24,7 @@ gem 'httpclient'
 gem 'typhoeus'
 gem 'font-awesome-sass'
 gem 'kaminari', '~> 0.17.0'
+gem 'ngrok', '~> 1.6', '>= 1.6.1'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

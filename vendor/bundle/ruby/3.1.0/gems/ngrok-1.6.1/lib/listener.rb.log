@@ -1,0 +1,77 @@
+# Logfile created on 2023-01-16 12:41:21 +0900 by logger.rb/v1.5.0
+I, [2023-01-16T12:41:21.375655 #36822]  INFO -- : *** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+E, [2023-01-16T12:41:21.376011 #36822] ERROR -- : exit (SystemExit)
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/ngrok-1.6.1/lib/listener.rb:26:in `exit'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/ngrok-1.6.1/lib/listener.rb:26:in `block in <top (required)>'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/config.rb:28:in `call'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:117:in `block in _process_changes'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/thread.rb:26:in `rescue_and_log'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:116:in `_process_changes'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:25:in `block in loop_for'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:20:in `loop'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:20:in `loop_for'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/loop.rb:85:in `_process_changes'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/loop.rb:51:in `block in start'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/thread.rb:26:in `rescue_and_log'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/thread.rb:18:in `block in new'
+I, [2023-01-16T12:41:21.376116 #36822]  INFO -- : *** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+E, [2023-01-16T12:41:21.376461 #36822] ERROR -- : stream closed in another thread (IOError)
+
+E, [2023-01-16T12:41:21.376621 #36822] ERROR -- : failed to allocate memory (NoMemoryError)
+
+E, [2023-01-16T12:41:21.376739 #36822] ERROR -- : stack level too deep (SystemStackError)
+
+E, [2023-01-16T12:41:21.376931 #36822] ERROR -- : machine stack overflow in critical region (fatal)
+
+E, [2023-01-16T12:41:21.377042 #36822] ERROR -- : exception reentered (fatal)
+
+E, [2023-01-16T12:41:21.378572 #36822] ERROR -- : No such file or directory @ rb_sysopen - /Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/ngrok-1.6.1/lib/listener.rb.log (Errno::ENOENT)
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0/logger/log_device.rb:95:in `initialize'
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0/logger/log_device.rb:95:in `open'
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0/logger/log_device.rb:95:in `open_logfile'
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0/logger/log_device.rb:86:in `set_dev'
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0/logger/log_device.rb:18:in `initialize'
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0/logger.rb:390:in `new'
+/Users/hisazumimasahito/.rbenv/versions/3.1.2/lib/ruby/3.1.0/logger.rb:390:in `initialize'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/daemons-1.4.1/lib/daemons/application.rb:346:in `new'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/daemons-1.4.1/lib/daemons/application.rb:346:in `exception_log'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/daemons-1.4.1/lib/daemons/application.rb:192:in `block in start_load'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/ngrok-1.6.1/ext/rakefile.rb:12:in `fork'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/ngrok-1.6.1/ext/rakefile.rb:12:in `block in <top (required)>'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `block in execute'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `each'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `execute'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:219:in `block in invoke_with_call_chain'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `synchronize'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `invoke_with_call_chain'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:243:in `block in invoke_prerequisites'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:241:in `each'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:241:in `invoke_prerequisites'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:218:in `block in invoke_with_call_chain'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `synchronize'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `invoke_with_call_chain'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/task.rb:188:in `invoke'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:160:in `invoke_task'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `block (2 levels) in top_level'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `each'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `block in top_level'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:125:in `run_with_threads'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:110:in `top_level'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:83:in `block in run'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:186:in `standard_exception_handling'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/lib/rake/application.rb:80:in `run'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/exe/rake:27:in `<main>'
+E, [2023-01-16T12:41:21.378742 #36822] ERROR -- : exit (SystemExit)
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/ngrok-1.6.1/lib/listener.rb:26:in `exit'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/ngrok-1.6.1/lib/listener.rb:26:in `block in <top (required)>'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/config.rb:28:in `call'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:117:in `block in _process_changes'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/thread.rb:26:in `rescue_and_log'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:116:in `_process_changes'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:25:in `block in loop_for'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:20:in `loop'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/processor.rb:20:in `loop_for'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/loop.rb:85:in `_process_changes'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/event/loop.rb:51:in `block in start'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/thread.rb:26:in `rescue_and_log'
+/Users/hisazumimasahito/Desktop/itbootcamp/vendor/bundle/ruby/3.1.0/gems/listen-3.8.0/lib/listen/thread.rb:18:in `block in new'
