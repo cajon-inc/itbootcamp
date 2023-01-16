@@ -20,7 +20,7 @@ class LineLoginApiController < ApplicationController
     bot_prompt='aggressive'
     scope = 'profile%20openid' #ユーザーに付与を依頼する権限
 
-    authorization_url = "#{base_authorization_url}?response_type=#{response_type}&client_id=#{client_id}&redirect_uri=#{redirect_uri}&state=#{state}&scope=#{scope}"
+    authorization_url = "#{base_authorization_url}?response_type=#{response_type}&client_id=#{client_id}&redirect_uri=#{redirect_uri}&state=#{state}&bot_prompt=#{bot_prompt}&scope=#{scope}"
 
     redirect_to authorization_url, allow_other_host: true
   end
