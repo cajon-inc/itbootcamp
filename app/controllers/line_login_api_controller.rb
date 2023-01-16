@@ -30,8 +30,8 @@ class LineLoginApiController < ApplicationController
     # CSRF対策のトークンが一致する場合のみ、ログイン処理を続ける
     if params[:state] == session[:state]
 
-      uid = get_uid(params[:code])
-      user = User.find_or_initialize_by(uid: uid)
+      line_user_id = get_line_user_id(params[:code])
+      user = User.find_or_initialize_by(line_user_id: line_user_id)
 
       if user.save
         session[:user_id] = user.id
@@ -48,19 +48,19 @@ class LineLoginApiController < ApplicationController
 
   private
 
-  def get_uid(code)
+  def get_line_user_id(code)
 
     # ユーザーのIDトークンからプロフィール情報（ユーザーID）を取得する
     # https://developers.line.biz/ja/docs/line-login/verify-id-token/
 
-    uid_token = get_uid_token(code)
+    line_user_id_token = get_line_user_id_token(code)
 
-    if uid_token.present?
+    if line_user_id_token.present?
 
       url = 'https://api.line.me/oauth2/v2.1/verify'
       options = {
         body: {
-          id_token: uid_token,
+          id_token: line_user_id_token,
           client_id: ENV['LINE_KEY'] # 本番環境では環境変数などに保管
         }
       }
@@ -79,7 +79,7 @@ class LineLoginApiController < ApplicationController
 
   end
 
-  def get_uid_token(code)
+  def get_line_user_id_token(code)
 
     # ユーザーのアクセストークン（IDトークン）を取得する
     # https://developers.line.biz/ja/reference/line-login/#issue-access-token
